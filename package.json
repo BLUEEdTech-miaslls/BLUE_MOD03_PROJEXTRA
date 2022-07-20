@@ -1,0 +1,33 @@
+{
+  "name": "blue_mod03_projextra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miaslls/BLUE_MOD03_PROJEXTRA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miaslls/BLUE_MOD03_PROJEXTRA/issues"
+  },
+  "homepage": "https://github.com/miaslls/BLUE_MOD03_PROJEXTRA#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
