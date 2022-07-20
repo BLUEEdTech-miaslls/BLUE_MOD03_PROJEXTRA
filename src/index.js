@@ -4,7 +4,6 @@ import express from 'express';
 import cors from 'cors';
 import databaseConnection from './database/dbConnection.js';
 import productRoutes from './routes/product.routes.js';
-import {} from './middleware/product.middleware.js';
 import 'dotenv/config';
 
 const app = express();
