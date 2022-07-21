@@ -5,6 +5,7 @@ import {
   addProductService,
   findProductByIdService,
   updateProductService,
+  deleteProductService,
 } from '../services/product.services.js';
 
 export const getAllProductsController = async (req, res) => {
@@ -63,6 +64,24 @@ export const updateProductController = async (req, res) => {
     const product = await updateProductService(idParam, body);
 
     res.send(product);
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+};
+
+export const deleteProductController = async (req, res) => {
+  try {
+    const idParam = req.params.id;
+
+    const productById = await findProductByIdService(idParam);
+
+    if (!productById) {
+      res.status(404).send({ message: 'not found' });
+    }
+
+    await deleteProductService(idParam);
+
+    res.send({ message: 'deleted' });
   } catch (err) {
     res.status(500).send({ message: err.message });
   }

@@ -11,3 +11,5 @@ export const findProductByIdService = (id) => Product.findById(id);
 export const updateProductService = (id, body) => {
   return Product.findByIdAndUpdate(id, body).setOptions({ returnOriginal: false });
 };
+
+export const deleteProductService = (id) => Product.findByIdAndDelete(id);
