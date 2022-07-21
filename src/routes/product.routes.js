@@ -10,12 +10,12 @@ import {
   updateProductController,
   deleteProductController,
 } from '../controllers/product.controllers.js';
-import {} from '../middleware/product.middleware.js';
+import { validMoodId, validMoodBody } from '../middleware/product.middleware.js';
 
 router.get('/', getAllProductsController);
-router.post('/', addProductController);
-router.get('/:id', findProductByIdController);
-router.put('/:id', updateProductController);
-router.delete('/:id', deleteProductController);
+router.post('/', validMoodBody, addProductController);
+router.get('/:id', validMoodId, findProductByIdController);
+router.put('/:id', validMoodId, validMoodBody, updateProductController);
+router.delete('/:id', validMoodId, deleteProductController);
 
 export default router;
